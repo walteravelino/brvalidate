@@ -2,7 +2,7 @@ package brvalidate
 
 import "regexp"
 
-func docValidate(doc string, pattern *regexp.Regexp, size int, position int) bool {
+func DocValidate(doc string, pattern *regexp.Regexp, size int, pos int) bool {
 
 	if !pattern.MatchString(doc) {
 		return false
@@ -15,10 +15,10 @@ func docValidate(doc string, pattern *regexp.Regexp, size int, position int) boo
 	}
 
 	d := doc[:size]
-	digit := dvCalc(d, position)
+	digit := dvCalc(d, pos)
 
 	d = d + digit
-	digit = dvCalc(d, position+1)
+	digit = dvCalc(d, pos+1)
 
 	return doc == d+digit
 }
