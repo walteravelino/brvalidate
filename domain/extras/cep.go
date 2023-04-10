@@ -1,4 +1,4 @@
-package aux
+package extras
 
 import (
 	"github.com/walteravelino/brvalidate/domain"

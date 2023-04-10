@@ -2,7 +2,7 @@ package tests
 
 import (
 	"github.com/walteravelino/brvalidate/domain"
-	"github.com/walteravelino/brvalidate/domain/aux"
+	"github.com/walteravelino/brvalidate/domain/extras"
 	"testing"
 )
 
@@ -86,7 +86,7 @@ func TestCEP(t *testing.T) {
 		{"Valid", true, "25000-000", []domain.FederativeUnit{}},
 	} {
 		t.Run(testName(i, item.name), func(t *testing.T) {
-			assertEqual(t, item.expected, aux.CEP(item.value, item.uf...))
+			assertEqual(t, item.expected, extras.CEP(item.value, item.uf...))
 		})
 	}
 }
@@ -118,7 +118,7 @@ func TestCEPRegexp(t *testing.T) {
 		{"Valid", true, "99999-999"},
 	} {
 		t.Run(testName(i, item.name), func(t *testing.T) {
-			assertEqual(t, item.expected, aux.CepPattern.MatchString(item.value))
+			assertEqual(t, item.expected, extras.CepPattern.MatchString(item.value))
 		})
 	}
 }
