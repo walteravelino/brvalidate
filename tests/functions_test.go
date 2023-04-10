@@ -7,11 +7,12 @@ import (
 
 func assertEqual(t *testing.T, expected, actual bool) {
 	if expected != actual {
-		t.Fatalf(`
-Not equal!
-expected: %v
-actual:   %v
-`, expected, actual)
+		t.Fatalf(`Not equal!
+						expected: %v
+						actual:   %v`,
+			expected,
+			actual,
+		)
 	}
 }
 
