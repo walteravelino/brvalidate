@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"github.com/walteravelino/brvalidate/domain/vehicle"
+	"github.com/walteravelino/brvalidate/vehicle"
 	"testing"
 )
 
