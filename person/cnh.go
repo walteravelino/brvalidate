@@ -1,6 +1,8 @@
 package person
 
-import "github.com/walteravelino/brvalidate/domain"
+import (
+	"github.com/walteravelino/brvalidate"
+)
 
 func CNH(value string) bool {
 	if len(value) != 11 {

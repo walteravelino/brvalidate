@@ -1,6 +1,7 @@
 package person
 
 import (
+	domain "github.com/walteravelino/brvalidate"
 	"regexp"
 )
 
@@ -15,5 +16,5 @@ func CNPJ(value string) bool {
 		pos  = 5
 	)
 
-	return DocumentValidate(value, cnpjPattern, size, pos)
+	return domain.DocumentValidate(value, cnpjPattern, size, pos)
 }

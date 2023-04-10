@@ -1,7 +1,7 @@
 package extras
 
 import (
-	"github.com/walteravelino/brvalidate/domain"
+	"github.com/walteravelino/brvalidate"
 	"regexp"
 	"strconv"
 )

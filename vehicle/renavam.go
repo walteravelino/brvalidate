@@ -1,7 +1,7 @@
 package vehicle
 
 import (
-	"github.com/walteravelino/brvalidate/domain"
+	"github.com/walteravelino/brvalidate"
 	"strconv"
 )
 
