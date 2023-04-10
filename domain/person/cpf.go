@@ -1,4 +1,4 @@
-package brvalidate
+package person
 
 import (
 	"regexp"
@@ -8,12 +8,12 @@ var (
 	cpfPattern = regexp.MustCompile("^\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}$")
 )
 
-func CPF(doc string) bool {
+func CPF(value string) bool {
 
 	const (
 		size = 9
 		pos  = 10
 	)
 
-	return DocValidate(doc, cpfPattern, size, pos)
+	return DocumentValidate(value, cpfPattern, size, pos)
 }
