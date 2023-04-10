@@ -57,7 +57,6 @@ func ToInt(r rune) int {
 }
 
 func DocumentValidate(value string, pattern *regexp.Regexp, size int, pos int) bool {
-
 	if !pattern.MatchString(value) {
 		return false
 	}
