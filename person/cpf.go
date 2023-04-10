@@ -1,6 +1,7 @@
 package person
 
 import (
+	"github.com/walteravelino/brvalidate"
 	"regexp"
 )
 
@@ -15,5 +16,5 @@ func CPF(value string) bool {
 		pos  = 10
 	)
 
-	return DocumentValidate(value, cpfPattern, size, pos)
+	return brvalidate.DocumentValidate(value, cpfPattern, size, pos)
 }
