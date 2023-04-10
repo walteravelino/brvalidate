@@ -1,7 +1,6 @@
 package tests
 
 import (
-	brvalidate "github.com/walteravelino/brvalidate/application/vehicle"
 	"github.com/walteravelino/brvalidate/domain/vehicle"
 	"testing"
 )
@@ -21,7 +20,7 @@ func TestPlate(t *testing.T) {
 		{"ValidNewFormat", true, "CAT4B31"},
 	} {
 		t.Run(testName(i, item.name), func(t *testing.T) {
-			assertEqual(t, item.expected, brvalidate.Plate(item.value))
+			assertEqual(t, item.expected, vehicle.Plate(item.value))
 		})
 	}
 }

@@ -1,6 +1,6 @@
 # BR Validate
-<a href="https://pypi.org/project/wltr-value-validate/">
-  <img alt="PyPI" src="https://img.shields.io/go-mod/go-version/brvalidate">
+<a href="https://pkg.go.dev/github.com/walteravelino/brvalidate/">
+  <img alt="GoMod" src="https://img.shields.io/github/go-mod/go-version/walteravelino/brvalidate">
 </a>
 
 [![Build Status](https://travis-ci.com/walteravelino/Projetos.svg?branch=master)](https://travis-ci.com/walteravelino/Projetos)
@@ -13,7 +13,6 @@
 
 - StackOverFlow [@walteravelino](https://stackoverflow.com/users/13001807/walter-avelino)
 - Github: [@walteravelino](https://github.com/walteravelino)
-- Linkedin: [@walteravelino](https://linkedin.com/in/walter-avelino-434197105)
 - DEV: [@walteravelino](https://dev.to/walteravelino)
 
 
@@ -29,7 +28,7 @@ Pacote para validação de documentos
 Para instalar o pacote:
 
 ```bash
-go get brvalidate
+go get github.com/walteravelino/brvalidate
 ```
 
 # Funções de Validação
