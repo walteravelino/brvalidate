@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"github.com/walteravelino/brvalidate"
+	"github.com/walteravelino/brvalidate/domain/vehicle"
 	"testing"
 )
 
@@ -26,7 +26,7 @@ func TestRenavam(t *testing.T) {
 		{"Valid", true, "01373045326"},
 	} {
 		t.Run(testName(i, item.name), func(t *testing.T) {
-			assertEqual(t, item.expected, brvalidate.Renavan(item.value))
+			assertEqual(t, item.expected, vehicle.Renavan(item.value))
 		})
 	}
 }

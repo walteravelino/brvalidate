@@ -1,7 +1,8 @@
 package tests
 
 import (
-	brvalidate "github.com/walteravelino/brvalidate"
+	brvalidate "github.com/walteravelino/brvalidate/application/vehicle"
+	"github.com/walteravelino/brvalidate/domain/vehicle"
 	"testing"
 )
 
@@ -40,7 +41,7 @@ func TestNational(t *testing.T) {
 		{"ValidOldFormat", true, "ABC-1234"},
 	} {
 		t.Run(testName(i, item.name), func(t *testing.T) {
-			assertEqual(t, item.expected, brvalidate.National(item.value))
+			assertEqual(t, item.expected, vehicle.National(item.value))
 		})
 	}
 }
@@ -60,7 +61,7 @@ func TestMercosul(t *testing.T) {
 		{"ValidNewFormat", true, "ABC1D23"},
 	} {
 		t.Run(testName(i, item.name), func(t *testing.T) {
-			assertEqual(t, item.expected, brvalidate.Mercosul(item.value))
+			assertEqual(t, item.expected, vehicle.Mercosul(item.value))
 		})
 	}
 }

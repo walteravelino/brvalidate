@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"github.com/walteravelino/brvalidate"
+	"github.com/walteravelino/brvalidate/domain/person"
 	"testing"
 )
 
@@ -28,7 +28,7 @@ func TestCNH(t *testing.T) {
 		{"Valid", true, "30582684883"},
 	} {
 		t.Run(testName(i, item.name), func(t *testing.T) {
-			assertEqual(t, item.expected, brvalidate.CNH(item.value))
+			assertEqual(t, item.expected, person.CNH(item.value))
 		})
 	}
 }

@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"github.com/walteravelino/brvalidate"
+	"github.com/walteravelino/brvalidate/domain/person"
 	"testing"
 )
 
@@ -32,7 +32,7 @@ func TestCPF(t *testing.T) {
 		{"Valid", true, "054.276.100-90"},
 	} {
 		t.Run(testName(i, item.name), func(t *testing.T) {
-			assertEqual(t, item.expected, brvalidate.CPF(item.value))
+			assertEqual(t, item.expected, person.CPF(item.value))
 		})
 	}
 }
