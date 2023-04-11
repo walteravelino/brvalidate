@@ -7,6 +7,7 @@
 <img src = "https://img.shields.io/github/languages/top/walteravelino/brvalidate">
 <a href="https://github.com/walteravelino/Projetos/blob/master/LICENSE"><img src = "https://img.shields.io/github/license/walteravelino/Projetos"></a>
 
+
 ## Autor
 
 👤 **Walter Avelino**
