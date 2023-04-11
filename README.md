@@ -34,15 +34,15 @@ go get github.com/walteravelino/brvalidate
 # Funções de Validação
 ### Documentos
 #### Pessoa
-- `func CPF(value string) bool`
-- `func CNPJ(value string) bool`
-- `func CNH(value string) bool`
+- `func person.CPF(value string) bool`
+- `func person.CNPJ(value string) bool`
+- `func person.CNH(value string) bool`
 #### Veículo
-- `func Renavan(value string) bool`
-- `func Plate(value string) bool`
-### Auxiliar
+- `func vehicle.Renavan(value string) bool`
+- `func vehicle.Plate(value string) bool`
+### Extras
 #### EBCT
-- `func CEP(value string, ufs ...FederativeUnit) bool`
+- `func extras.CEP(value string, ufs ...FederativeUnit) bool`
 
 ------------
 ## Validação
@@ -54,14 +54,14 @@ Valida o documento passado como argumento. Retorna um `bool`, `True` caso seja v
 
 ```go
 import (
-"github.com/walteravelino/brvalidate"
+"github.com/walteravelino/brvalidate/person"
 )
 
 cpf = CPF()
 
 // Validar CPF
-brvalidate.CPF("01234567890") // True
-brvalidate.CPF("01234567891") // False
+person.CPF("01234567890") // True
+person.CPF("01234567891") // False
 ```
 
 ### Caso Especial de CPF
