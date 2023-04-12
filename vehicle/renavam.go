@@ -11,13 +11,13 @@ func Renavan(value string) bool {
 	if len(value) != 11 {
 		return false
 	}
-	if !domain.SameDigits(value) {
+	if !brvalidate.SameDigits(value) {
 		return false
 	}
 
 	var sum int
 	for i, r := range value[:len(value)-1] {
-		sum += domain.ToInt(r) * RenavanWeight[i]
+		sum += brvalidate.ToInt(r) * RenavanWeight[i]
 	}
 
 	digit := (sum * 10) % 11

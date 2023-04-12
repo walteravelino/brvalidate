@@ -8,7 +8,7 @@ func CNH(value string) bool {
 	if len(value) != 11 {
 		return false
 	}
-	if !domain.SameDigits(value) {
+	if !brvalidate.SameDigits(value) {
 		return false
 	}
 
@@ -16,7 +16,7 @@ func CNH(value string) bool {
 	weight := 9
 
 	for _, r := range value[:len(value)-2] {
-		sum += domain.ToInt(r) * weight
+		sum += brvalidate.ToInt(r) * weight
 		weight--
 	}
 
@@ -34,7 +34,7 @@ func CNH(value string) bool {
 	weight = 1
 
 	for _, r := range value[:len(value)-2] {
-		sum += domain.ToInt(r) * weight
+		sum += brvalidate.ToInt(r) * weight
 		weight++
 	}
 
@@ -50,6 +50,6 @@ func CNH(value string) bool {
 		secondDigit = 0
 	}
 
-	return domain.ToInt(rune(value[len(value)-2])) == firstDigit &&
-		domain.ToInt(rune(value[len(value)-1])) == secondDigit
+	return brvalidate.ToInt(rune(value[len(value)-2])) == firstDigit &&
+		brvalidate.ToInt(rune(value[len(value)-1])) == secondDigit
 }
